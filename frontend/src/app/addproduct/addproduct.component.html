@@ -1,0 +1,19 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let product of products">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <img src="../../assets/iphone.jpg" class="image-responsive">
+        <!--<p [(ngModel)]="productData.id" class="card-text" value="id">Product: {{product._id}}</p>-->
+        <p class="card-text" value="name">Product: {{product.name}}</p>
+        <p  class="card-text" value="price">Price: {{product.price}}</p>
+        <p class="card-text">Quantity: {{product.quantity}}</p>
+        <p>Enter the number of Quantity: <input class="card-text" [(ngModel)]="productData.quantity" value="quantity" type="number" name="quantity" min="1" max={{product.quantity}}></p>
+      </div>
+      <div class="card-footer text-muted">
+        <a href="#" class="btn btn-primary">Buy Product</a>
+        <a href="#" class="btn btn-primary">Remove Product</a>
+      </div>
+    </div>
+  </div>
+</div>

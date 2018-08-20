@@ -1,0 +1,38 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="md-0">Login</h3>
+        </div>
+        <div class="card-body">
+          <form class="form">
+            <div class="form-group">
+              <label for="">Email</label>
+              <input [(ngModel)]="loginUserData.email" name="email" value="email" type="text" class="form-control rounded-0" required>
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input [(ngModel)]="loginUserData.password" name="password" value="password" type="password" class="form-control rounded-0" required>
+            </div>
+            <button (click)="loginUser(email)" type="button" class="btn btn-success float-right">Login</button>
+          </form>    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h5>Or</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p><button (click)="doGoogleLogin()" type="button" class="btn btn-default socialg"><a href="#" class="fa fa-google"></a> Sign in With google</button></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p><button (click)="doFacebookLogin()" type="button" class="btn btn-default socialf"><a href="#" class="fa fa-facebook"></a> Sign in With Facebook</button></p>
+    </div>
+  </div>
+  <!-- <app-social-login></app-social-login> -->
